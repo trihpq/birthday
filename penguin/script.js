@@ -1,10 +1,10 @@
 const flowerGift = document.getElementById("flowerGift");
-const HUBGift = document.getElementById("HUBGift");
+const TDNGift = document.getElementById("TDNGift");
 
 const title = document.getElementById("title");
 
 let flowerOpened = false;
-let HUBOpened = false;
+let TDNOpened = false;
 
 
 function changeTitle(text) {
@@ -25,7 +25,7 @@ flowerGift.addEventListener("click", () => {
 
     flowerGift.innerHTML = "💐";
 
-    changeTitle("You're the most gorgeous woman💖");
+    changeTitle("You're the cutest penguin 🐧");
 
     flowerOpened = true;
 
@@ -34,14 +34,14 @@ flowerGift.addEventListener("click", () => {
 });
 
 
-HUBGift.addEventListener("click", () => {
+TDNGift.addEventListener("click", () => {
 
-    HUBGift.innerHTML =
-        `<img src="./img/HUB-logo.png" alt="HUB Logo">`;
+    TDNGift.innerHTML =
+        `<img src="./img/TDN-logo.png" alt="TDN Logo">`;
 
-    changeTitle("You're the best teacher 🌟");
+    changeTitle("You're so amazing 🌟");
 
-    HUBOpened = true;
+    TDNOpened = true;
 
     checkFinished();
 });
@@ -49,12 +49,12 @@ HUBGift.addEventListener("click", () => {
 
 function checkFinished() {
 
-    if (flowerOpened && HUBOpened) {
+    if (flowerOpened && TDNOpened) {
 
         setTimeout(() => {
 
             changeTitle(
-                "Thank you for everything ❤️"
+                "Happy Birthday my penguin 🐧"
             );
 
             title.style.fontSize = "2.55rem";
@@ -62,11 +62,6 @@ function checkFinished() {
             launchConfetti();
 
         }, 700);
-
-        setTimeout(() => {
-            window.location.href = "./html/thanks.html"
-        }, 1000)
-
     }
 
 }
